@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Module for a Flask app with Babel extension,
-language selection, and translations
+Module for a Flask app with Babel extension, language selection,
+and translations
 """
 
 from flask import Flask, render_template, request, g
