@@ -17,9 +17,7 @@ def index() -> str:
     Returns:
         str: Rendered HTML content
     """
-    return render_template('0-index.html',
-                           title='Welcome to Holberton',
-                           header='Hello world')
+    return render_template('0-index.html')
 
 
 if __name__ == "__main__":
