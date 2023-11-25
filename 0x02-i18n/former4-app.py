@@ -33,9 +33,9 @@ def get_locale() -> str:
         str: Best-matching language code
     """
     # Check if 'locale' parameter is present in the request
-    requested_locale = request.args.get('locale')
-    if requested_locale and requested_locale in app.config['LANGUAGES']:
-        return requested_locale
+    if 'locale' in request.args and request.args['locale']
+    in app.config['LANGUAGES']:
+        return request.args['locale']
     # Resort to the previous default behavior
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
@@ -48,11 +48,7 @@ def index() -> str:
     Returns:
         str: Rendered HTML content
     """
-    # Get the selected locale using the get_locale function
-    selected_locale = get_locale()
-
-    # Pass the selected_locale to the template
-    return render_template('4-index.html', selected_locale=selected_locale)
+    return render_template('4-index.html')
 
 
 if __name__ == "__main__":
