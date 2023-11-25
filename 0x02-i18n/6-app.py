@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Module 6-app.py
-"""
+Module 6-app.py that Changes your get_locale function
+to use a user’s preferred local if it is supported."""
 
 
 from flask import Flask, render_template, request, g
